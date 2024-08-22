@@ -23,6 +23,7 @@ public:
 class PlayerState
 {
 public:
+	int CurrentMapIndex;
 	Position CurrentPosition; // 현재
 	Position NewPosition; // 입력 받은 플레이어의 위치
 };
@@ -30,12 +31,13 @@ public:
 // 현재 맵 정보, 설명
 class MapData
 {
+public:
 	std::string Name;
 	std::string Description;
 	std::string MapInfo;
 	unsigned int MapWidth;
 	
-public:
+
 	Position MapPosition;
 	MapData();
 	MapData(std::string Name, std::string Description, std::string MapInfo)
@@ -49,8 +51,13 @@ public:
 class WorldState // 맵이 여러개 있는 world <- 플레이어가 위치해야 할 정보를 담고 있는 클래스
 {
 public:
-	std::vector<MapData> MapDatas;
+	std::vector<MapData> Mapdatas;
 };
 
 void InitializeGame(PlayerState& playerstate, WorldState& worldstate);
-
+void RenderGame(PlayerState& playerstate, const WorldState& worldstate);
+void GetInput(PlayerState& playerstate, const WorldState& worldstate);
+void UpdateGame(PlayerState& playerstate, WorldState& worldstate);
+int PositionToIndex(const Position& position, int mapWidth);
+bool IsSpaceOutsideMap(const Position& pos, const MapData currentMap);
+bool IsSpaceCanMove(const Position& pos, const MapData currentMap);

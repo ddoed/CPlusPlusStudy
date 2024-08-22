@@ -27,11 +27,14 @@ int main()
     
     while (true)
     {
-        // 플레이어의 입력 : if(Async wasd)
-        ParseCommand(); // player의 x,y 좌표 이동
-        // Rendering : 이미지를 그려주는 것
-        // Update : 특정위치에 도착하면 다음 맵으로 이동
+        system("cls");
+        RenderGame(player, world); // Rendering : 이미지를 그려주는 것
+        GetInput(player, world);// 플레이어의 입력 : if(Async wasd)
+        //ParseCommand(); // player의 x,y 좌표 이동
+        UpdateGame(player, world);// Update : 특정위치에 도착하면 다음 맵으로 이동
         // Quit : 게임 종료 기능 함수, Bool Quit -> break Exit(0)
+
+        Sleep(50);
     }
     //데이터 기록
 }
