@@ -96,6 +96,10 @@ public:
 		hungry -= 10;
 		happy += 5;
 	}
+	void Hunting()
+	{
+		std::cout << "사냥개가 사냥을 합니다" << std::endl;
+	}
 };
 
 class Cat2 : public Pet
@@ -108,6 +112,10 @@ public:
 	{
 		this->curious = curious;
 		std::cout << "Cat을 생성했습니다" << std::endl;
+	}
+	void Hide()
+	{
+		std::cout << "고양이가 숨었습니다" << std::endl;
 	}
 };
 
@@ -145,6 +153,26 @@ public:
 		UseActivePoint();
 	}
 
+	// Pet 클래스를 이용해서 고유 함수를 실행시키고 싶다
+	// Pet을 고유 클래스로 타입 변환 시키고 싶다
+	// 모든 Pet이 상속받는 하나의 자식클래스로 변활할 수 없다
+	// 조건 필요
+
+	// c언어 형변환 (타입) 이름;
+	// c++언어 형변환 조건을 추가해서 연산자로 만듦
+	// static_cast, dynamic_cast, reinterpret_cast, const_cast
+
+	void Play2()
+	{
+		HuntDog* huntDog = dynamic_cast<HuntDog*>(myPet);
+		if(huntDog != nullptr)
+			huntDog->Hunting();
+
+		Cat2* cat = dynamic_cast<Cat2*>(myPet);
+		if (cat != nullptr)
+			cat->Hide();
+	}
+
 	void ShowInfo()
 	{
 		std::cout << "소지 금액 : " << money << std::endl;
@@ -161,11 +189,15 @@ void lecture9()
 	Pet pet(100,100);
 	Dog2 dog(100, 100);
 	HuntDog hdog(100, 100);
-	PetController player(&pet,5000, 3);
+	Cat2 cat(100, 100,100);
+	PetController player(&cat,5000, 3);
 	player.Play();
 	player.ShowInfo();
 
-	PetController p2(&dog, 1000, 3);
+	PetController p2(&hdog, 1000, 3);
 	p2.Play();
 	p2.ShowInfo();
+
+	p2.Play2();
+	player.Play2();
 }
