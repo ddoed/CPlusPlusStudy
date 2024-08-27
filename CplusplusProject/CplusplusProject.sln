@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CplusplusProject", "Cpluspl
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ConsoleText", "..\ConsoleText\ConsoleText.vcxproj", "{4B454361-5F92-4EBE-9AB8-4349C49DC031}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RPGBattleSystem", "..\RPGBattleSystem\RPGBattleSystem.vcxproj", "{D1EE6495-593D-4AC0-A3EF-92C58DE52977}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -31,6 +33,14 @@ Global
 		{4B454361-5F92-4EBE-9AB8-4349C49DC031}.Release|x64.Build.0 = Release|x64
 		{4B454361-5F92-4EBE-9AB8-4349C49DC031}.Release|x86.ActiveCfg = Release|Win32
 		{4B454361-5F92-4EBE-9AB8-4349C49DC031}.Release|x86.Build.0 = Release|Win32
+		{D1EE6495-593D-4AC0-A3EF-92C58DE52977}.Debug|x64.ActiveCfg = Debug|x64
+		{D1EE6495-593D-4AC0-A3EF-92C58DE52977}.Debug|x64.Build.0 = Debug|x64
+		{D1EE6495-593D-4AC0-A3EF-92C58DE52977}.Debug|x86.ActiveCfg = Debug|Win32
+		{D1EE6495-593D-4AC0-A3EF-92C58DE52977}.Debug|x86.Build.0 = Debug|Win32
+		{D1EE6495-593D-4AC0-A3EF-92C58DE52977}.Release|x64.ActiveCfg = Release|x64
+		{D1EE6495-593D-4AC0-A3EF-92C58DE52977}.Release|x64.Build.0 = Release|x64
+		{D1EE6495-593D-4AC0-A3EF-92C58DE52977}.Release|x86.ActiveCfg = Release|Win32
+		{D1EE6495-593D-4AC0-A3EF-92C58DE52977}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
