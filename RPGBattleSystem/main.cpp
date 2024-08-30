@@ -35,6 +35,8 @@ int main(void)
 		}
 	}
 
+	
+
 	player.ShowStatus();
 	// 1. 게임 시작 화면
 

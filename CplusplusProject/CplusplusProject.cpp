@@ -23,7 +23,11 @@ int main()
     //lecture9();
     //lecture10();
     //lecture11();
-    lecture12();
+    //lecture12();
+
+
+
+    lecture13();
    
     
 }
